@@ -1,9 +1,9 @@
 var express = require('express');
-
 var router = express.Router();
-
 var burger = require("../models/burgers.js");
 
+
+//gets list of all burgers, burgers are sepereate in handel bars main
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = {
@@ -14,39 +14,24 @@ router.get("/", function (req, res) {
     });
 });
 
+
+//adds a burger
 router.post("/", function (req, res) {
     burger.insertOne(req.body.burger_name, function () {
         res.redirect("/");
     });
 });
 
+// in order for this to work a method overide is required
+router.put("/:id", function (req, res) {
+    var id = req.params.id;
 
-router.put("/burgers/:id", function (req, res, next) {
-    burgers.update(
-      {id: req.req.params.id},
-      {returning: true, where: {id: req.params.id} }
-    )
-    .then(function([ rowsUpdate, [updatedBook] ]) {
-      res.json(updatedBook)
-    })
-    .catch(next)
-   })
+ console.log("id", id);
 
-
-
-
-
-
-
-// router.put("/api/burgers/:id", function (req, res) {
-//     var id = req.params.id;
-
-//     console.log("id", id);
-
-//     burger.updateOne(id, function () {
-//         res.redirect("/");
-//     });
-// });
+   burger.updateOne(id, function () {
+        res.redirect("/");
+  });
+ });
 
 module.exports = router;
 //router.put("/api/cats/:id", function(req, res) {

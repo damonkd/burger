@@ -2,6 +2,9 @@ var express = require("express");
 
 var PORT = process.env.PORT || 3000;
 
+// this is why push method would not work
+var methodOverride = require('method-override');
+
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -16,6 +19,8 @@ var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.use(methodOverride("_method"));
 
 //var methodOverride = require('method-override');
 
