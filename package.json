@@ -12,7 +12,16 @@
   "dependencies": {
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
+    "method-override": "^3.0.0",
     "mysql": "^2.17.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damonkd/burger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damonkd/burger/issues"
+  },
+  "homepage": "https://github.com/damonkd/burger#readme"
 }
