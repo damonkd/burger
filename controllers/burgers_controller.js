@@ -3,7 +3,7 @@ var router = express.Router();
 var burger = require("../models/burgers.js");
 
 
-//gets list of all burgers, burgers are sepereate in handel bars main
+//gets list of all burgers, burgers are sepereated in handel bars main
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = {

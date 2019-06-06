@@ -1,13 +1,67 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    width: 100%;
+    width: 50%;
     background-image: url('../img/Burger%20background.jpg');
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
 }
 
 h1 {
     margin: auto 0;
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 3%;
     margin-top: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+h2
+{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#leftSide
+{
+    float: left;
+    text-align: left;
+    width: 25%;
+    
+}
+
+#rightSide
+{
+    float: right;
+    text-align: left;
+    width: 25%;
+    
+}
+
+#burgerContent
+{
+    text-align: center;
+}
+
+#add
+{
+    clear: both;
+    float: bottom;
+    text-align: center;
+}
+
+
+#centerBox
+{
+    clear: both;
+    text-align: center;
+}
+
+#picture
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+}
