@@ -28,7 +28,7 @@ app.use(methodOverride("_method"));
 //app.use(methodOverride('_method'));
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgers_Controller.js");
+var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
 
